@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import { ThemeProvider } from "./context/ThemeContext";
 import { LocaleProvider } from "./context/LocaleContext";
@@ -15,13 +15,13 @@ if (!rootEl) {
 createRoot(rootEl).render(
   <StrictMode>
     <ErrorBoundary>
-      <BrowserRouter>
+      <HashRouter>
         <LocaleProvider>
           <ThemeProvider>
             <App />
           </ThemeProvider>
         </LocaleProvider>
-      </BrowserRouter>
+      </HashRouter>
     </ErrorBoundary>
   </StrictMode>
 );
