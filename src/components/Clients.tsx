@@ -6,6 +6,7 @@ export function Clients() {
   const { t } = useLocale();
 
   const loop = [...clientBrands, ...clientBrands];
+  const mobileGrid = clientBrands.slice(0, 12);
 
   return (
     <section
@@ -43,8 +44,21 @@ export function Clients() {
         </div>
       </div>
 
-      {/* Faixa #fff na base da secção (sem creme abaixo) — alinha com Serviços (bg-white) */}
-      <div className="relative w-full overflow-hidden border-t border-line/80 bg-white pb-40 pt-12 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] dark:border-white/10 dark:bg-white">
+      {/* Mobile: grade visível; Desktop: faixa animada contínua */}
+      <div className="border-t border-line/80 bg-white px-6 pb-10 pt-8 dark:border-white/10 dark:bg-white md:hidden">
+        <div className="mx-auto grid max-w-5xl grid-cols-2 gap-3 sm:grid-cols-3">
+          {mobileGrid.map(({ id, logoFile }) => {
+            const label = t(`clients.brands.${id}`);
+            return (
+              <div key={`mobile-${id}`} className="rounded-2xl border border-line/70 bg-paper-2/50 px-3 py-4">
+                <ClientLogoCell id={id} logoFile={logoFile} label={label} showLabel />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="relative hidden w-full overflow-hidden border-t border-line/80 bg-white pb-40 pt-12 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)] dark:border-white/10 dark:bg-white md:block">
         <div
           className="pointer-events-none absolute inset-y-0 left-0 z-[1] w-16 bg-gradient-to-r from-white to-transparent dark:from-white"
           aria-hidden
