@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Sistema v2 — tokens em CSS (tema claro default + .dark).
+  Cores alinhadas ao protótipo "Estruturado" (Vimeal Redesign.html · v2).
+*/
+@layer base {
+  :root {
+    --ink: #15120e;
+    --ink-2: #2a251d;
+    --ink-3: #5a5248;
+    --ink-4: #8a8177;
+    --paper: #faf8f4;
+    --paper-2: #f2eee6;
+    --line: #eceae6;
+    --line-2: #d9d2c3;
+    --brand: #af4a43;
+    --brand-dark: #8e3c36;
+    --brand-light: #d88a82;
+    --brand-wash: #f6e8e4;
+    --accent: #3d5a3a;
+    --accent-soft: #dfe6d8;
+    --accent-ink: #2a3f28;
+  }
+
+  html.dark {
+    --paper: #1c1915;
+    --paper-2: #252119;
+    --line: rgba(255, 255, 255, 0.08);
+    --line-2: rgba(255, 255, 255, 0.12);
+    --ink-3: #a39a8f;
+    --ink-4: #8a8177;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--paper);
+    color: var(--ink);
+  }
+  html:not(.dark) {
+    color-scheme: light;
+  }
+  html.dark {
+    background-color: #0f0e0b;
+    color: #f4f1eb;
+    color-scheme: dark;
+  }
+  body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--paper);
+    color: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+  }
+  html.dark body {
+    background-color: #0f0e0b;
+    color: #f4f1eb;
+  }
+  #root {
+    min-height: 100vh;
+    background-color: inherit;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-site px-6 sm:px-8;
+  }
+
+  /**
+   * Marquee clientes — loop infinito (direita → esquerda).
+   * CSS explícito: evita falhas se a utility Tailwind do keyframe não for emitida.
+   */
+  .client-logos-marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 2.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    will-change: transform;
+    animation: vimeal-clients-marquee 52s linear infinite;
+  }
+
+  @media (min-width: 768px) {
+    .client-logos-marquee-track {
+      gap: 3.5rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .client-logos-marquee-track {
+      animation: none;
+    }
+  }
+}
+
+@keyframes vimeal-clients-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* Tema claro: fundo paper na árvore principal (substitui branco #fff forçado legado) */
+html:not(.dark) body,
+html:not(.dark) #root,
+html:not(.dark) main {
+  background-color: #faf8f4 !important;
+}
+
+html.dark body,
+html.dark #root,
+html.dark main {
+  background-color: #0f0e0b !important;
+}

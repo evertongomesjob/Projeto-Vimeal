@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function () {
+        try {
+          var t =
+            localStorage.getItem("vimeal-color-mode") || localStorage.getItem("vimeal-theme");
+          if (t === "dark") document.documentElement.classList.add("dark");
+          else document.documentElement.classList.remove("dark");
+        } catch (_) {
+          document.documentElement.classList.remove("dark");
+        }
+      })();
+    </script>
+    <script>
+      (function () {
+        try {
+          var s = localStorage.getItem("vimeal-locale");
+          if (s === "en") {
+            document.documentElement.lang = "en";
+            return;
+          }
+          if (s === "pt") {
+            document.documentElement.lang = "pt-BR";
+            return;
+          }
+          var langs = navigator.languages || [navigator.language || "pt"];
+          for (var i = 0; i < langs.length; i++) {
+            if (langs[i] && langs[i].toLowerCase().indexOf("en") === 0) {
+              document.documentElement.lang = "en";
+              return;
+            }
+          }
+          document.documentElement.lang = "pt-BR";
+        } catch (_) {
+          document.documentElement.lang = "pt-BR";
+        }
+      })();
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vimeal — Consultoria em Business Intelligence, engenharia de dados e visualização com ecossistema Microsoft."
+    />
+    <title>Vimeal | Business Intelligence &amp; Dados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+# Dependências e build
+node_modules
+dist
+*.local
+
+# Vite
+.vite
+*.tsbuildinfo
+
+# Ambiente
+.env
+.env.*
+!.env.example
+
+# SO / IDE
+.DS_Store
+Thumbs.db
+.cursor
+.kilo
+*.log
+npm-debug.log*
+
+# Cópias e arquivos que não entram no site
+*.zip
+backup-*/
+Redesign/
+Kilo Code visuals proposed/
+logo-explorations/
+linkedin-cover-c01-editorial.html
+
+# Fontes de marca (não importadas no Vite; logos em public/)
+brand-assets/

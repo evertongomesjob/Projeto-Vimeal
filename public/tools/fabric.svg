@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+  <title>Microsoft Fabric</title>
+  <!-- Grade 2×2 verde/teal com separação fina (estilo ícone Fabric) -->
+  <path fill="#00A170" d="M5 5h10v10H5z"/>
+  <path fill="#00BC8E" d="M16 5h10v10H16z"/>
+  <path fill="#008272" d="M5 16h10v10H5z"/>
+  <path fill="#10D4A8" d="M16 16h10v10H16z"/>
+</svg>
