@@ -17,13 +17,26 @@ export const messagesEn: Messages = {
   },
   hero: {
     badgeSuffix: "Business Intelligence consulting · Microsoft",
-    titleLine1: "Organized data,",
+    eyebrow: "End-to-end BI projects for companies that need more confident decisions",
+    titleLine1: "Turn scattered data into",
     titleLine2: "clearer decisions.",
     lead:
-      "Vimeal connects data engineering, analytics modeling, and visualization in one engagement — so your company stops debating the number and starts debating the decision.",
-    ctaTalk: "Request a conversation →",
+      "Vimeal structures data engineering, analytics modeling, and executive dashboards in one engagement — focused on results, governance, and real business adoption.",
+    supporting:
+      "You work directly with the specialist who designs and delivers the solution, without commercial layers and without over-engineering.",
+    ctaTalk: "Assess my scenario →",
     ctaServices: "View services",
+    ctaProof: "See proof and clients",
+    highlight1: "Direct engagement with a specialist",
+    highlight2: "Projects on Microsoft, Azure, and Fabric",
+    highlight3: "From diagnosis to executive dashboard",
     archCaption: "ARCHITECTURE / TYPICAL VIMEAL PROJECT",
+    quickStat1Value: "40+ projects",
+    quickStat1Label: "Delivered in BI and analytics",
+    quickStat2Value: "25+ clients",
+    quickStat2Label: "Across critical business sectors",
+    quickStat3Value: "Direct engagement",
+    quickStat3Label: "No middlemen in delivery",
   },
   diagram: {
     sources: "SOURCES",
@@ -41,6 +54,9 @@ export const messagesEn: Messages = {
     governance: "GOVERNANCE · SECURITY · DEVOPS (AZURE DEVOPS · CI/CD)",
   },
   metrics: {
+    kicker: "Results",
+    title: "Hands-on experience in BI, analytics, and data modernization initiatives.",
+    lead: "Numbers that reduce hiring risk and reinforce delivery capability in enterprise environments.",
     years: "years in BI practice",
     projects: "projects delivered",
     clients: "Clients",
@@ -142,6 +158,9 @@ export const messagesEn: Messages = {
     titleAccent: "organizations",
     lead:
       "Brands across banking, health, technology, consulting, logistics, and infrastructure — from real data and BI work.",
+    proof1: "Experience in complex enterprise environments",
+    proof2: "Projects delivered in regulated and critical sectors",
+    proof3: "Consulting approach with operational proximity",
     brands: {
       itau: "Itaú",
       bradesco: "Bradesco",

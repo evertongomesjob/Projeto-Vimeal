@@ -15,13 +15,26 @@ export const messagesPt = {
   },
   hero: {
     badgeSuffix: "Consultoria em Business Intelligence · Microsoft",
-    titleLine1: "Dados organizados,",
-    titleLine2: "decisões claras.",
+    eyebrow: "Projetos de BI ponta a ponta para empresas que precisam decidir com mais confiança",
+    titleLine1: "Transforme dados dispersos em",
+    titleLine2: "decisões com clareza.",
     lead:
-      "A Vimeal conecta engenharia de dados, modelagem analítica e visualização num projeto único — para que sua empresa pare de discutir o número e passe a discutir a decisão.",
-    ctaTalk: "Solicitar conversa →",
+      "A Vimeal estrutura engenharia de dados, modelagem analítica e dashboards executivos em um único projeto — com foco em resultado, governança e adoção real pelo negócio.",
+    supporting:
+      "Você fala direto com quem desenha e entrega a solução, sem camadas comerciais e sem over-engineering.",
+    ctaTalk: "Quero avaliar meu cenário →",
     ctaServices: "Ver serviços",
+    ctaProof: "Ver provas e clientes",
+    highlight1: "Atendimento direto com especialista",
+    highlight2: "Projetos em Microsoft, Azure e Fabric",
+    highlight3: "Do diagnóstico ao dashboard executivo",
     archCaption: "ARCHITECTURE / TYPICAL VIMEAL PROJECT",
+    quickStat1Value: "40+ projetos",
+    quickStat1Label: "Entregues em BI e analytics",
+    quickStat2Value: "25+ clientes",
+    quickStat2Label: "Em setores críticos do negócio",
+    quickStat3Value: "Atuação direta",
+    quickStat3Label: "Sem atravessadores na entrega",
   },
   diagram: {
     sources: "SOURCES",
@@ -39,6 +52,9 @@ export const messagesPt = {
     governance: "GOVERNANCE · SECURITY · DEVOPS (AZURE DEVOPS · CI/CD)",
   },
   metrics: {
+    kicker: "Resultados",
+    title: "Experiência aplicada em projetos de BI, analytics e modernização de dados.",
+    lead: "Números que ajudam a reduzir risco na contratação e reforçam capacidade de entrega em contextos corporativos.",
     years: "anos de prática em BI",
     projects: "projetos entregues",
     clients: "Clientes",
@@ -140,6 +156,9 @@ export const messagesPt = {
     titleAccent: "organizações",
     lead:
       "Marcas em bancos e finanças, saúde, tecnologia, consultoria, logística e infraestrutura — em projetos reais de dados e BI.",
+    proof1: "Experiência com ambientes corporativos complexos",
+    proof2: "Projetos entregues em setores regulados e críticos",
+    proof3: "Atuação consultiva com proximidade operacional",
     brands: {
       itau: "Itaú",
       bradesco: "Bradesco",

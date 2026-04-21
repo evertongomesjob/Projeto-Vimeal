@@ -21,6 +21,26 @@ export function Clients() {
           <span className="text-brand">{t("clients.titleAccent")}</span>
         </h2>
         <p className="max-w-2xl text-[17px] leading-relaxed text-ink-3 dark:text-zinc-400">{t("clients.lead")}</p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <span className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-2 text-sm font-medium text-ink-2 shadow-sm dark:border-white/10 dark:bg-zinc-900 dark:text-zinc-300">
+            <span className="text-brand" aria-hidden>
+              ●
+            </span>
+            {t("clients.proof1")}
+          </span>
+          <span className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-2 text-sm font-medium text-ink-2 shadow-sm dark:border-white/10 dark:bg-zinc-900 dark:text-zinc-300">
+            <span className="text-brand" aria-hidden>
+              ●
+            </span>
+            {t("clients.proof2")}
+          </span>
+          <span className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-2 text-sm font-medium text-ink-2 shadow-sm dark:border-white/10 dark:bg-zinc-900 dark:text-zinc-300">
+            <span className="text-brand" aria-hidden>
+              ●
+            </span>
+            {t("clients.proof3")}
+          </span>
+        </div>
       </div>
 
       {/* Faixa #fff na base da secção (sem creme abaixo) — alinha com Serviços (bg-white) */}

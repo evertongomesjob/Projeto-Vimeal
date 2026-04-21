@@ -15,8 +15,8 @@ export function Home() {
   return (
     <>
       <Hero />
-      <Metrics />
       <Clients />
+      <Metrics />
       <Services />
       <Tools />
       <Process />
